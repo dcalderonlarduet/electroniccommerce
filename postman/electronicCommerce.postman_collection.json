@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "1499eec6-8be5-4d85-b7e2-ab0c9ddbc8ba",
+		"name": "electronicCommerce",
+		"description": "electronicCommerce\n\nContact Support:\n Name: Daniel Calderon Larduet\n Email: dcalderon@soaint.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14434844"
+	},
+	"item": [
+		{
+			"name": "electroniccommerce",
+			"item": [
+				{
+					"name": "Get the product price given the application date, product id and brand id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/electroniccommerce/price?applicationDate=2020-06-14 10:00:00&productId=35455&brandId=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"electroniccommerce",
+								"price"
+							],
+							"query": [
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 10:00:00",
+									"description": "(Required) application date in format yyyy-MM-dd HH:mm:ss "
+								},
+								{
+									"key": "productId",
+									"value": "35455",
+									"description": "(Required) product identifier"
+								},
+								{
+									"key": "brandId",
+									"value": "1",
+									"description": "(Required) brand identifier"
+								}
+							]
+						},
+						"description": "Return the product price given the application date, product id and brand id"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/electroniccommerce/price?applicationDate=conse&productId=65051645&brandId=65051645",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"electroniccommerce",
+										"price"
+									],
+									"query": [
+										{
+											"key": "applicationDate",
+											"value": "conse"
+										},
+										{
+											"key": "productId",
+											"value": "65051645"
+										},
+										{
+											"key": "brandId",
+											"value": "65051645"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": -90745219,\n  \"brandId\": -94822484,\n  \"startDate\": \"1991-12-11T09:20:46.644Z\",\n  \"endDate\": \"2007-11-08T20:59:03.020Z\",\n  \"priceList\": -48922445,\n  \"productId\": 72132351,\n  \"price\": 61785321.21267399\n}"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/electroniccommerce/price?applicationDate=conse&productId=65051645&brandId=65051645",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"electroniccommerce",
+										"price"
+									],
+									"query": [
+										{
+											"key": "applicationDate",
+											"value": "conse"
+										},
+										{
+											"key": "productId",
+											"value": "65051645"
+										},
+										{
+											"key": "brandId",
+											"value": "65051645"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "Get a list with the products prices of electronic commerce",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": "{{baseUrl}}/electroniccommerce/allprice",
+						"description": "Returns a list with the products prices of electronic commerce"
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/electroniccommerce/allprice"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": -68631053,\n    \"brandId\": 18326836,\n    \"startDate\": \"1995-04-19T13:23:18.031Z\",\n    \"endDate\": \"1985-08-16T05:18:00.476Z\",\n    \"priceList\": 26421691,\n    \"productId\": 91148689,\n    \"price\": 23384588.189260125\n  },\n  {\n    \"id\": -24772654,\n    \"brandId\": -95347087,\n    \"startDate\": \"2000-03-19T23:24:55.279Z\",\n    \"endDate\": \"2015-09-08T03:39:16.404Z\",\n    \"priceList\": -67757513,\n    \"productId\": 63359436,\n    \"price\": 75751487.87806499\n  }\n]"
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/electroniccommerce/allprice"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

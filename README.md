@@ -15,7 +15,9 @@ En la Raiz del proyecto se encuentra un carpeta donde contiene el fichero .json 
 
 ### Test Unitarios
 
-Se Realizaron 6 test unitarios donde 5 se validan las peticiones al servicio con los datos del ejemplo y el 6to la carga de todos los precios de la BD
+Ademas de comprobar y validar que el servicio funcionara correctamente desde el swagger, 
+se realizaron 6 test unitarios, donde 5 se validan las peticiones al servicio con los datos del ejemplo 
+y el 6to la carga de todos los precios de la BD
 #### Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 #### Test 2: petición a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 #### Test 3: petición a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA)
